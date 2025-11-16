@@ -16,15 +16,28 @@ const About = () => {
   return (
     <div className="w-full">
       {/* Hero */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6 fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              About <span className="text-gradient">Bravonest</span>
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              We bridge the gap between real-world engineering projects and practical education.
-            </p>
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        {/* Background image for About hero. Place an image at /about.png in public/ to use it. */}
+        <img src="/about.png" alt="About Bravonest" className="absolute inset-0 w-full h-full object-cover z-0" />
+        {/* Overlay for contrast */}
+        <div className="absolute inset-0 bg-black/40 z-5" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto fade-in">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+              {/* Left: text */}
+              <div className="space-y-6 text-left md:pl-8 lg:pl-16">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+                  About <span className="text-gradient">Bravonest</span>
+                </h1>
+                <p className="text-xl text-white/90 max-w-xl">
+                  We bridge the gap between real-world engineering projects and practical education.
+                </p>
+              </div>
+
+              {/* Right: empty column gives space so content sits left over the background image */}
+              <div className="hidden md:block" />
+            </div>
           </div>
         </div>
       </section>
@@ -157,24 +170,25 @@ const About = () => {
         <div className="container mx-auto px-4">
           <SectionHeader
             title="Meet the Bravonest Team"
-            subtitle="The engineers and educators behind our work"
+            
             centered
           />
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
             {team.map((member, idx) => (
-              <Card key={idx} className="hover-lift border-border/50">
-                <CardHeader>
-                  <div className="w-16 h-16 rounded-full bg-gradient-tech flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <CardTitle className="text-center text-lg">{member.name}</CardTitle>
-                  <CardDescription className="text-center font-semibold text-primary">
-                    {member.role}
-                  </CardDescription>
-                </CardHeader>
+              <Card key={idx} className="hover-lift border-border/50 relative overflow-visible">
+                {/* Image positioned overlapping the top-left edge of the card */}
+                <div className="absolute -top-6 -left-6">
+                  <img src="/dajev.jpg" alt={`${member.name} photo`} className="w-20 h-20 rounded-full object-cover ring-2 ring-white/20 shadow-md" />
+                </div>
+
                 <CardContent>
-                  <p className="text-sm text-muted-foreground text-center">{member.desc}</p>
+                  <div className="flex flex-col items-center justify-center text-center min-h-[120px]">
+                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                    <CardDescription className="font-semibold text-primary">{member.role}</CardDescription>
+                  </div>
+
+                  <p className="text-sm text-muted-foreground mt-4 text-center">{member.desc}</p>
                 </CardContent>
               </Card>
             ))}

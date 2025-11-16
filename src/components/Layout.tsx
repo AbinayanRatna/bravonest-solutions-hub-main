@@ -100,16 +100,15 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <div className="flex items-center gap-3 font-bold text-lg">
-                <img
-                  src="/bravonest.png"
-                  alt="Bravonest"
-                  className="h-10 w-auto rounded-full object-contain"
-                  style={{ padding: '2px' }}
-                />
-                <span className="text-white">Bravonest</span>
-              </div>
-              <p className="text-sm text-white/80">
+              <div className="flex items-center font-bold text-lg">
+                  <img
+                    src="/bravonest.png"
+                    alt="Bravonest"
+                    className="h-10 w-auto rounded-full object-contain"
+                    style={{ padding: '2px' }}
+                  />
+                </div>
+              <p className="text-sm text-white">
                 Engineering excellence meets practical education. Building software, PCB designs, and future engineers.
               </p>
             </div>
@@ -118,17 +117,17 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               <h3 className="font-semibold mb-4 text-white">Services</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link to="/solutions" className="text-white/80 hover:text-white transition-colors">
+                  <Link to="/solutions" className="text-white hover:text-white transition-colors">
                     Software Solutions
                   </Link>
                 </li>
                 <li>
-                  <Link to="/solutions" className="text-white/80 hover:text-white transition-colors">
+                  <Link to="/solutions" className="text-white hover:text-white transition-colors">
                     PCB Design
                   </Link>
                 </li>
                 <li>
-                  <Link to="/learn" className="text-white/80 hover:text-white transition-colors">
+                  <Link to="/learn" className="text-white hover:text-white transition-colors">
                     Courses
                   </Link>
                 </li>
@@ -139,12 +138,12 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               <h3 className="font-semibold mb-4 text-white">Company</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link to="/about" className="text-white/80 hover:text-white transition-colors">
+                  <Link to="/about" className="text-white hover:text-white transition-colors">
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="text-white/80 hover:text-white transition-colors">
+                  <Link to="/contact" className="text-white hover:text-white transition-colors">
                     Contact
                   </Link>
                 </li>
@@ -153,7 +152,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
             <div>
               <h3 className="font-semibold mb-4 text-white">Contact</h3>
-              <ul className="space-y-2 text-sm text-white/80">
+              <ul className="space-y-2 text-sm text-white">
                 <li>hello@bravonest.com</li>
                 <li>+1 (555) 123-4567</li>
                 <li>San Francisco, CA</li>
@@ -161,7 +160,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-white/80">
+          <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-white">
             © {new Date().getFullYear()} Bravonest. All rights reserved.
           </div>
         </div>

@@ -25,9 +25,21 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       {/* Navbar */}
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 font-bold text-xl">
-            <Code2 className="h-6 w-6 text-primary" />
-            <span className="text-gradient">Bravonest</span>
+          <Link to="/" className="flex items-center gap-3 font-bold text-xl">
+            {/* site logo image from public/bravonest.png (only image shown) */}
+            <img
+              src="/bravonest.png"
+              alt="Bravonest"
+              className="h-10 md:h-12 w-auto rounded-full object-contain"
+              style={{ padding: '2px' }}
+              onError={(e) => {
+                // hide broken image and keep accessible label via aria-label on Link
+                const target = e.currentTarget as HTMLImageElement;
+                target.style.display = 'none';
+                const parent = target.parentElement;
+                if (parent) parent.classList.add('logo-fallback');
+              }}
+            />
           </Link>
 
           {/* Desktop Navigation */}

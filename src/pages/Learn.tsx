@@ -71,18 +71,26 @@ const Learn = () => {
   return (
     <div className="w-full">
       {/* Hero */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6 fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              Pre-Engineering Courses with <span className="text-gradient">Real-World Focus</span>
+      <section
+        className="relative pt-20 md:pt-32 pb-20 md:pb-32 bg-cover bg-center bg-no-repeat min-h-[420px]"
+        style={{ backgroundImage: `url('/learn.png')` }}
+      >
+        {/* subtle dark overlay so text is always readable */}
+        <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-2xl space-y-6 fade-in text-left">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-lg">
+              Pre-Engineering Courses with <span className="text-accent">Real-World Focus</span>
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-white/95 drop-shadow-md">
               Build practical skills in electronics, programming, and PCB design from industry professionals.
             </p>
-            <CTAButton variant="course" to="/learn#register" className="mt-6">
-              Register for a Course
-            </CTAButton>
+            <div className="mt-6">
+              <CTAButton variant="course" to="/learn#register">
+                Register for a Course
+              </CTAButton>
+            </div>
           </div>
         </div>
       </section>

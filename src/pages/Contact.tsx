@@ -70,13 +70,19 @@ const Contact = () => {
   return (
     <div className="w-full">
       {/* Hero */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6 fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              Let's Build or Learn <span className="text-gradient">Together</span>
+      <section
+        className="relative pt-20 md:pt-32 pb-20 md:pb-32 bg-cover bg-center bg-no-repeat min-h-[400px]"
+        style={{ backgroundImage: `url('/contact.png')` }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-2xl space-y-6 fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-lg">
+              Let's connect and Build <span className="text-accent">Together</span>
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-white/95 drop-shadow-md">
               Share your project needs or training goals, and we'll help you achieve them.
             </p>
           </div>

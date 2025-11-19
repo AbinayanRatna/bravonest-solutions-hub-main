@@ -67,13 +67,19 @@ const Solutions = () => {
   return (
     <div className="w-full">
       {/* Hero */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6 fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              Solutions That <span className="text-gradient">Scale</span>
+      <section 
+        className="py-20 md:py-32 bg-cover bg-left bg-no-repeat relative"
+        style={{
+          backgroundImage: "url('/solutions.png')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-2xl space-y-6 fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+              Solutions That <span className="text-accent">Scale</span>
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-white/90">
               From software to silicon—we build integrated solutions for the modern world.
             </p>
           </div>
@@ -83,10 +89,14 @@ const Solutions = () => {
       {/* Intro */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-4">
-            <p className="text-lg text-muted-foreground">
-              Bravonest is your combined software and hardware solutions partner. Whether you need a web application, an embedded device, or both working together, we deliver end-to-end engineering.
-            </p>
+          <div className="max-w-5xl mx-auto">
+            <Card className="border-border/50 hover-lift glow-on-hover">
+              <CardContent className="pt-8 pb-8">
+                <p className="text-lg text-muted-foreground">
+                  Bravonest is your combined software and hardware solutions partner. Whether you need a web application, an embedded device, or both working together, we deliver end-to-end engineering.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -96,13 +106,12 @@ const Solutions = () => {
         <div className="container mx-auto px-4">
           <SectionHeader
             title="Software Solutions"
-            subtitle="Modern applications built for performance and scalability"
             centered
           />
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {softwareSolutions.map((solution, idx) => (
-              <Card key={idx} className="hover-lift border-border/50">
+              <Card key={idx} className="hover-lift border-border/50 glow-on-hover">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <solution.icon className="h-6 w-6 text-primary" />
@@ -131,13 +140,12 @@ const Solutions = () => {
         <div className="container mx-auto px-4">
           <SectionHeader
             title="PCB Design & Embedded Systems"
-            subtitle="Hardware solutions from schematic to production"
             centered
           />
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {pcbSolutions.map((solution, idx) => (
-              <Card key={idx} className="hover-lift border-border/50">
+              <Card key={idx} className="hover-lift border-border/50 glow-on-hover">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
                     <solution.icon className="h-6 w-6 text-secondary" />
@@ -152,7 +160,7 @@ const Solutions = () => {
           </div>
 
           {/* Process Timeline */}
-          <div className="mt-16 max-w-4xl mx-auto">
+          {/* <div className="mt-16 max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               {["Idea", "Schematic", "Layout", "Prototype", "Testing"].map((step, idx) => (
                 <div key={idx} className="flex items-center gap-4">
@@ -168,7 +176,7 @@ const Solutions = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -177,13 +185,12 @@ const Solutions = () => {
         <div className="container mx-auto px-4">
           <SectionHeader
             title="Use Cases"
-            subtitle="Real-world applications we've built"
             centered
           />
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 max-w-5xl mx-auto">
             {useCases.map((useCase, idx) => (
-              <Card key={idx} className="hover-lift border-border/50">
+              <Card key={idx} className="hover-lift border-border/50 glow-on-hover">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
                     <useCase.icon className="h-6 w-6 text-accent" />

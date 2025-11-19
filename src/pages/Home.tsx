@@ -53,7 +53,6 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <SectionHeader
             title="What We Do"
-            subtitle="Three core pillars driving innovation and learning"
             centered
           />
           
@@ -82,7 +81,6 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <SectionHeader
             title="Featured Solutions"
-            subtitle="Explore our range of technical services"
             centered
           />
           
@@ -131,7 +129,6 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <SectionHeader
             title="Why Choose Bravonest"
-            subtitle="What sets us apart"
             centered
           />
           

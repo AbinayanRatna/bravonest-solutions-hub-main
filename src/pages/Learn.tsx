@@ -60,6 +60,19 @@ const Learn = () => {
       return;
     }
 
+    // Create email content
+    const subject = encodeURIComponent(`Course Registration - ${formData.course}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Course of Interest: ${formData.course}\n\n` +
+      `Message:\n${formData.message || 'No additional message provided'}`
+    );
+    const mailtoLink = `mailto:support@bravonest.lk?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+
     toast({
       title: "Registration Received!",
       description: "We'll contact you with the next available batch details.",

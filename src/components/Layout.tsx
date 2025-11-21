@@ -153,9 +153,17 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <div>
               <h3 className="font-semibold mb-4 text-white">Contact</h3>
               <ul className="space-y-2 text-sm text-white">
-                <li>hello@bravonest.com</li>
-                <li>+1 (555) 123-4567</li>
-                <li>San Francisco, CA</li>
+                <li>
+                  <a href="mailto:support@bravonest.lk" className="hover:text-primary transition-colors">
+                    support@bravonest.lk
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+947275123473" className="hover:text-primary transition-colors">
+                    +947275123473
+                  </a>
+                </li>
+                <li>Palaly road, kondavil east, Jaffna, Sri Lanka</li>
               </ul>
             </div>
           </div>

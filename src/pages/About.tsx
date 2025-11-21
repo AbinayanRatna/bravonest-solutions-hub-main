@@ -5,12 +5,42 @@ import { Target, Eye, Ear, Lightbulb, Wrench, GraduationCap, Heart, Shield, User
 
 const About = () => {
   const team = [
-    { name: "Alex Chen", role: "Founder & Software Lead", desc: "Full-stack engineer with 10+ years building scalable systems" },
-    { name: "Sarah Martinez", role: "PCB Design Lead", desc: "Expert in high-speed PCB design and embedded systems integration" },
-    { name: "Jordan Lee", role: "Course Director", desc: "Educator and engineer passionate about making tech accessible" },
-    { name: "Priya Sharma", role: "Embedded Systems Engineer", desc: "Specializes in IoT and firmware development" },
-    { name: "Marcus Thompson", role: "Web Development Lead", desc: "React and Node.js specialist with startup experience" },
-    { name: "Emily Wang", role: "Student Success Manager", desc: "Ensures every learner achieves their goals" },
+    {
+      name: "Alex Chen",
+      role: "Founder & Software Lead",
+      desc: "Full-stack engineer with 10+ years building scalable systems",
+      image: "https://i.pravatar.cc/300?img=12",
+    },
+    {
+      name: "Sarah Martinez",
+      role: "PCB Design Lead",
+      desc: "Expert in high-speed PCB design and embedded systems integration",
+      image: "https://i.pravatar.cc/300?img=47",
+    },
+    {
+      name: "Jordan Lee",
+      role: "Course Director",
+      desc: "Educator and engineer passionate about making tech accessible",
+      image: "https://i.pravatar.cc/300?img=33",
+    },
+    {
+      name: "Priya Sharma",
+      role: "Embedded Systems Engineer",
+      desc: "Specializes in IoT and firmware development",
+      image: "https://i.pravatar.cc/300?img=56",
+    },
+    {
+      name: "Marcus Thompson",
+      role: "Web Development Lead",
+      desc: "React and Node.js specialist with startup experience",
+      image: "https://i.pravatar.cc/300?img=22",
+    },
+    {
+      name: "Emily Wang",
+      role: "Student Success Manager",
+      desc: "Ensures every learner achieves their goals",
+      image: "https://i.pravatar.cc/300?img=15",
+    },
   ];
 
   return (
@@ -179,7 +209,7 @@ const About = () => {
                 {/* Image positioned overlapping the top-left edge of the card (larger) */}
                 <div className="absolute -top-8 -left-8 z-10">
                   <img
-                    src="/dajev.jpg"
+                    src={member.image ?? "/dajev.jpg"}
                     alt={`${member.name} photo`}
                     className="w-28 h-28 rounded-full object-cover border-4 border-black/10 shadow-xl transition-shadow hover:shadow-2xl"
                   />

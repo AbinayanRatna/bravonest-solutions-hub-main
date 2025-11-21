@@ -39,6 +39,20 @@ const Contact = () => {
       return;
     }
 
+    // Create email content
+    const subject = encodeURIComponent(`Project Call Request - ${projectForm.projectType}`);
+    const body = encodeURIComponent(
+      `Name: ${projectForm.name}\n` +
+      `Email: ${projectForm.email}\n` +
+      `Project Type: ${projectForm.projectType}\n` +
+      `Preferred Time Window: ${projectForm.timeWindow || 'Not specified'}\n\n` +
+      `Description:\n${projectForm.description}`
+    );
+    const mailtoLink = `mailto:support@bravonest.lk?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+
     toast({
       title: "Call Request Received!",
       description: "We'll reach out within 24 hours to schedule your project call.",
@@ -58,6 +72,19 @@ const Contact = () => {
       });
       return;
     }
+
+    // Create email content
+    const subject = encodeURIComponent(`Course Enquiry - ${courseForm.course}`);
+    const body = encodeURIComponent(
+      `Name: ${courseForm.name}\n` +
+      `Email: ${courseForm.email}\n` +
+      `Course of Interest: ${courseForm.course}\n\n` +
+      `Message:\n${courseForm.message || 'No additional message provided'}`
+    );
+    const mailtoLink = `mailto:support@bravonest.lk?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
 
     toast({
       title: "Enquiry Received!",
@@ -272,8 +299,9 @@ const Contact = () => {
                 <CardTitle className="text-lg">Email</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">hello@bravonest.com</p>
-                <p className="text-sm text-muted-foreground">support@bravonest.com</p>
+                <a href="mailto:support@bravonest.lk" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  support@bravonest.lk
+                </a>
               </CardContent>
             </Card>
 
@@ -285,8 +313,9 @@ const Contact = () => {
                 <CardTitle className="text-lg">Phone</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
-                <p className="text-sm text-muted-foreground">Mon-Fri, 9AM-6PM PST</p>
+                <a href="tel:+947275123473" className="text-sm text-muted-foreground hover:text-secondary transition-colors">
+                  +947275123473
+                </a>
               </CardContent>
             </Card>
 
@@ -298,8 +327,8 @@ const Contact = () => {
                 <CardTitle className="text-lg">Location</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">San Francisco, CA</p>
-                <p className="text-sm text-muted-foreground">United States</p>
+                <p className="text-sm text-muted-foreground">Palaly road, kondavil east</p>
+                <p className="text-sm text-muted-foreground">Jaffna, Sri Lanka</p>
               </CardContent>
             </Card>
           </div>

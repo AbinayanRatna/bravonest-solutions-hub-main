@@ -222,7 +222,7 @@ const Learn = () => {
       </section>
 
       {/* Registration Form */}
-      <section id="register" className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
+      <section id="register" className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative z-10">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center space-y-4 mb-8">
@@ -232,12 +232,12 @@ const Learn = () => {
               </p>
             </div>
 
-            <Card className="border-border/50">
+            <Card className="border-border/50 relative z-10">
               <CardHeader>
                 <CardTitle>Course Registration</CardTitle>
                 <CardDescription>Tell us about your learning goals</CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="relative z-10">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Full Name *</Label>

@@ -117,7 +117,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Forms */}
-      <section className="py-20">
+      <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <Tabs defaultValue="project" className="w-full">
@@ -126,16 +126,16 @@ const Contact = () => {
                 <TabsTrigger value="course">Course Enquiry</TabsTrigger>
               </TabsList>
 
-              <TabsContent value="project" className="mt-8">
-                <Card id="project-call" className="border-border/50">
+              <TabsContent value="project" className="mt-8 relative z-10">
+                <Card id="project-call" className="border-border/50 relative z-10">
                   <CardHeader>
                     <CardTitle className="text-2xl">Book a Project Call</CardTitle>
                     <CardDescription>
                       Share a few details about your software or PCB project and we'll schedule a call.
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <form onSubmit={handleProjectSubmit} className="space-y-6">
+                  <CardContent className="relative z-10">
+                    <form onSubmit={handleProjectSubmit} className="space-y-6 relative z-10">
                       <div className="space-y-2">
                         <Label htmlFor="project-name">Full Name *</Label>
                         <Input
@@ -206,16 +206,16 @@ const Contact = () => {
                 </Card>
               </TabsContent>
 
-              <TabsContent value="course" className="mt-8">
-                <Card className="border-border/50">
+              <TabsContent value="course" className="mt-8 relative z-10">
+                <Card className="border-border/50 relative z-10">
                   <CardHeader>
                     <CardTitle className="text-2xl">Course Enquiry</CardTitle>
                     <CardDescription>
                       Interested in our courses? Let us know what you'd like to learn.
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <form onSubmit={handleCourseSubmit} className="space-y-6">
+                  <CardContent className="relative z-10">
+                    <form onSubmit={handleCourseSubmit} className="space-y-6 relative z-10">
                       <div className="space-y-2">
                         <Label htmlFor="course-name">Full Name *</Label>
                         <Input

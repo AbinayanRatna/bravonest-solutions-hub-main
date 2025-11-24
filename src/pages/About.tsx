@@ -6,22 +6,22 @@ import { Target, Eye, Ear, Lightbulb, Wrench, GraduationCap, Heart, Shield, User
 const About = () => {
   const team = [
     {
-      name: "Alex Chen",
-      role: "Founder & Software Lead",
-      desc: "Full-stack engineer with 10+ years building scalable systems",
-      image: "https://i.pravatar.cc/300?img=12",
+      name: "Mr.B. Dajev",
+      role: "Director & CEO",
+      desc: "Electrical and Electronic Engineer, Expertise in IOT and Data Science",
+      image: "/dajev.jpg",
     },
     {
-      name: "Sarah Martinez",
-      role: "PCB Design Lead",
-      desc: "Expert in high-speed PCB design and embedded systems integration",
+      name: "Mr.R. Abinayan",
+      role: "Director",
+      desc: "Expert in software development and data science",
       image: "https://i.pravatar.cc/300?img=47",
     },
     {
-      name: "Jordan Lee",
-      role: "Course Director",
+      name: "Mr. Jude Sajith",
+      role: "Technical Advisor",
       desc: "Educator and engineer passionate about making tech accessible",
-      image: "https://i.pravatar.cc/300?img=33",
+      image: "public/team/jude.jpg",
     },
     {
       name: "Priya Sharma",
@@ -30,14 +30,14 @@ const About = () => {
       image: "https://i.pravatar.cc/300?img=56",
     },
     {
-      name: "Marcus Thompson",
-      role: "Web Development Lead",
-      desc: "React and Node.js specialist with startup experience",
-      image: "https://i.pravatar.cc/300?img=22",
+      name: "Mr.V.Sivaharan",
+      role: "Marketing Head",
+      desc: "M.Med.Stats (UoK) , B.Sc (Hons) Audiology , Dip .Psych & counselling",
+      image: "public/team/siva.jpg",
     },
     {
-      name: "Emily Wang",
-      role: "Student Success Manager",
+      name: "Mr.B. Dinuj",
+      role: "Course Coordinator",
       desc: "Ensures every learner achieves their goals",
       image: "https://i.pravatar.cc/300?img=15",
     },
